@@ -1,26 +1,26 @@
 //base
-@import './desktop/base/variables';
-@import './desktop/base/base';
-@import './desktop/base/reset';
+@import './base/variables';
+@import './base/base';
+@import './base/reset';
 
 // utils
-@import './desktop/utils/visually-hidden';
-@import './desktop/utils/placeholders';
-@import './desktop/utils/mixins';
+@import './utils/visually-hidden';
+@import './utils/placeholders';
+@import './utils/mixins';
 
 //componets
-@import './desktop/componets/container';
-@import './desktop/componets/section';
-@import './desktop/componets/button';
-@import './desktop/componets/_modals';
+@import './componets/container';
+@import './componets/section';
+@import './componets/button';
+@import './componets/_modals';
 
 // layout
-@import './desktop/layout/header';
-@import './desktop/layout/logo';
-@import './desktop/layout/hero';
-@import './desktop/layout/features';
-@import './desktop/layout/employ';
-@import './desktop/layout/team';
-@import './desktop/layout/clients';
-@import './desktop/layout/portfolio';
-@import './desktop/layout/footer';
+@import './layout/header';
+@import './layout/logo';
+@import './layout/hero';
+@import './layout/features';
+@import './layout/employ';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/portfolio';
+@import './layout/footer';
