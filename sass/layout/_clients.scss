@@ -1,0 +1,51 @@
+.client {
+  @extend %container;
+  @include section;
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  &__list {
+    @extend %list;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  &__item {
+    width: 170px;
+    height: 92px;
+    margin-left: 30px;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+  &__link {
+    @extend %link;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    background-color: var(--main-white-color);
+    fill: var(--icons-color);
+    transition: fill 250ms var(--timings), background-color 250ms var(--timings),
+      border-color 250ms var(--timings);
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+      background-color: var(--main-white-color);
+      border-color: var(--accent-color);
+    }
+  }
+}

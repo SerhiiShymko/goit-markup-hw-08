@@ -1,0 +1,23 @@
+.logo {
+  @extend %link;
+
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+
+  &__change {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    letter-spacing: 0.03em;
+    color: var(--main-white-color);
+
+    &--color {
+      color: var(--black-color);
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.header {
+  @extend %container;
+
+  border-bottom: 1px solid #ececec;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__group {
+    @extend %list;
+
+    display: flex;
+    margin-left: auto;
+  }
+  &__contact {
+    @extend %link;
+
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+
+    color: var(--second-color-text);
+
+    transition: color 250ms var(--timings);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  &__item + &__item {
+    margin-left: 50px;
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+.nav {
+  margin-left: 93px;
+
+  &_list {
+    @extend %list;
+    display: flex;
+  }
+  &__item + &__item {
+    margin-left: 50px;
+  }
+  &__link {
+    @extend %link;
+
+    display: block;
+    padding: 32px 0;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: var(--main-color-text);
+
+    transition: color 250ms var(--timings);
+
+    &--current {
+      position: relative;
+      color: var(--accent-color);
+    }
+    &--current::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+
+      display: block;
+      width: 100%;
+      border-radius: 2px;
+      height: 4px;
+      background-color: var(--accent-color);
+    }
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
