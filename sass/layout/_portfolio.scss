@@ -1,6 +1,6 @@
 .portfolio {
   @extend %container;
-  @include section;
+  // @include section;
 
   &__filter-list {
     @extend %list;

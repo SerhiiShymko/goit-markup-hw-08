@@ -1,6 +1,6 @@
 .employ {
   @extend %container;
-  @include section(0, 94px);
+  // @include section(0, 94px);
 
   &__title {
     font-weight: 700;

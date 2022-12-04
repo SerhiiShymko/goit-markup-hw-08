@@ -1,6 +1,6 @@
 .client {
   @extend %container;
-  @include section;
+  // @include section;
 
   &__title {
     font-weight: 700;

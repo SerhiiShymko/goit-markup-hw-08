@@ -5,13 +5,38 @@ $breakpoints: (
 );
 
 %section {
-  padding: 94px 0;
+  @media screen and (min-width: 480px) {
+    padding: 60px 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 %container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  outline: 2px solid red;
+
+  // phone screen
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  // tablet screen
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  // desktot screen
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 %link {

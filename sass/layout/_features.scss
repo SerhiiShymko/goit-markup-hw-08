@@ -5,34 +5,82 @@
   &__icon {
     display: flex;
     align-items: center;
-    padding: 25px 100px;
+
     background: var(--bg-color);
     border-radius: 4px;
+
+    @media screen and (min-width: 480px) {
+      width: 450px;
+      height: 120px;
+      padding: 25px 190px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      height: 120px;
+      padding: 25px 142px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      height: 120px;
+      padding: 25px 100px;
+    }
   }
   &__list {
     @extend %list;
-
-    display: flex;
-    margin-left: calc(-1 * var(--gap));
+    @media screen and (min-width: 480px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * var(--gap));
+      margin-bottom: calc(-1 * var(--gap));
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * var(--gap));
+      margin-bottom: calc(-1 * var(--gap));
+    }
   }
   &__item {
-    flex-basis: calc((100% - 4 * var(--gap)) / 4);
-    margin-left: var(--gap);
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: var(--gap);
+      }
+    }
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 2 * var(--gap)) / 2);
+
+      margin-left: var(--gap);
+      margin-bottom: var(--gap);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 4 * var(--gap)) / 4);
+
+      margin-left: var(--gap);
+      margin-bottom: var(--gap);
+    }
   }
   &__title {
     margin-top: 30px;
 
-    font-weight: 700;
     font-size: 14px;
     line-height: calc(16 / 14);
-    letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
   &__pre-title {
+    margin-top: 10px;
+
     font-size: 14px;
     line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
+
     color: var(--second-color-text);
-    margin-top: 10px;
   }
 }
