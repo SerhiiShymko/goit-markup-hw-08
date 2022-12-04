@@ -69,6 +69,7 @@
 
     font-size: 14px;
     line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
     text-transform: uppercase;
 
     @media screen and (max-width: 767px) {
@@ -80,6 +81,7 @@
 
     font-size: 14px;
     line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
 
     color: var(--second-color-text);
   }

@@ -8,7 +8,21 @@
     align-items: center;
   }
 
+  @media screen and (min-width: 480px) {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+
   &__group {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
     @extend %list;
 
     display: flex;
@@ -43,7 +57,11 @@
     fill: currentColor;
   }
 }
+
 .nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   margin-left: 93px;
 
   &_list {
