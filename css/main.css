@@ -470,6 +470,7 @@ img {
   padding: 0;
   margin: 0;
   list-style: none;
+  margin-bottom: auto;
 }
 
 .mobile-menu .link {
@@ -519,9 +520,6 @@ img {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-.mobile-socials-link:last-child {
-  border: none;
-}
 
 .header {
   border-bottom: 1px solid #ececec;
@@ -534,19 +532,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (min-width: 480px) {
-  .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-}
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -555,26 +541,30 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-.header__group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
 }
 @media screen and (max-width: 767px) {
   .header__group {
     display: none;
   }
 }
+@media screen and (min-width: 768px) {
+  .header__group {
+    display: inline-block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+  }
+}
 .header__contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1428571429;
@@ -583,11 +573,24 @@ img {
   -webkit-transition: color 250ms var(--timings);
   transition: color 250ms var(--timings);
 }
+@media screen and (min-width: 1200px) {
+  .header__contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 32px 0;
+  }
+}
 .header__contact:hover, .header__contact:focus {
   color: var(--accent-color);
 }
-.header__item + .header__item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .header__item + .header__item {
+    margin-left: 50px;
+  }
 }
 .header__icon {
   margin-right: 10px;

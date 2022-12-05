@@ -87,6 +87,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  margin-bottom: auto;
 }
 
 .mobile-menu .link {
@@ -125,10 +126,11 @@
   display: flex;
   gap: 20px;
 }
+
 .mobile-socials-link {
   @extend %link;
   position: relative;
-  
+
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -147,8 +149,5 @@
     width: 22px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
-  }
-  &:last-child {
-    border: none;
   }
 }
