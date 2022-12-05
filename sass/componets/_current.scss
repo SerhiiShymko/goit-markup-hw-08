@@ -1,0 +1,30 @@
+@media screen and (max-width: 767px) {
+  .link__current {
+    color: var(--accent-color);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .link__current {
+    position: relative;
+    color: var(--accent-color);
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+
+      display: block;
+      width: 100%;
+      border-radius: 2px;
+      height: 4px;
+      background-color: var(--accent-color);
+    }
+  }
+}

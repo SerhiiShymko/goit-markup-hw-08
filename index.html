@@ -32,7 +32,7 @@
       <nav class="nav">
         <ul class="nav_list">
           <li class="nav__item">
-            <a class="nav__link  nav__link--current" href="./index.html">Студія</a>
+            <a class="nav__link  link__current" href="./index.html">Студія</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="./portfolio.html">Портфоліо</a>
@@ -60,8 +60,8 @@
       </ul>
     </div>
     <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-      <svg class="menu-button">
-        <use href="./images/icons.svg#menu-button" widht="" height=""></use>
+      <svg class="menu-button" width="40" height="40">
+        <use href="./images/icons.svg#menu-button"></use>
       </svg>
     </button>
 
@@ -466,21 +466,46 @@
   <!-- Мобільне меню -->
   <div class="menu-container js-menu-container" id="mobile-menu">
     <button class="menu-toggle js-close-menu">
-      <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-        <path fill-rule="evenodd"
-          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-          clip-rule="evenodd"></path>
+      <svg class="menu-button" width="40" height="40">
+        <use href="./images/icons.svg#menu-close"></use>
       </svg>
     </button>
-
     <ul class="mobile-menu">
-      <li><a href="" class="link">About</a></li>
-      <li><a href="" class="link">Products</a></li>
-      <li><a href="" class="link">Contacts</a></li>
-      <li><a href="" class="link">Career</a></li>
+      <li class="menu__item">
+        <a class="menu__link link__current" href="./index.html">Студія</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="./portfolio.html">Портфоліо</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="">Контакти</a>
+      </li>
+    </ul>
+
+    <ul class="mobile-contacts">
+      <li class="mobile-contacts-item">
+        <a href="" class="mobile-contacts-tell">+38 096 111 11 11</a>
+      </li>
+      <li class="mobile-contacts-item">
+        <a href="" class="mobile-contacts-mail">info@devstudio.com</a>
+      </li>
+    </ul>
+
+    <ul class="mobile-socials">
+      <li class="mobile-socials-items">
+        <a href="" class="mobile-socials-link">Instagram</a>
+      </li>
+      <li class="mobile-socials-items">
+        <a href="" class="mobile-socials-link">Twitter</a>
+      </li>
+      <li class="mobile-socials-items">
+        <a href="" class="mobile-socials-link">Facebook</a>
+      </li>
+      <li class="mobile-socials-items">
+        <a href="" class="mobile-socials-link">LinkedIn</a>
+      </li>
     </ul>
   </div>
-
   <script src="./js/modal.js"></script>
   <script src="./js/mobile-menu.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

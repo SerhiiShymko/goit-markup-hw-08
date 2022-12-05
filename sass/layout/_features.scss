@@ -1,6 +1,6 @@
 .features {
   @extend %container;
-  @include section;
+  @extend %section;
 
   &__icon {
     display: flex;

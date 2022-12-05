@@ -50,10 +50,21 @@ img {
   margin: -1px;
 }
 
+@media screen and (max-width: 1199px) {
+  .features {
+    padding: 60px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    padding: 94px 0;
+  }
+}
+
 .footer__container, .portfolio, .client, .team__container, .employ, .features, .hero__container, .header {
   margin: 0 auto;
   padding: 0 15px;
-  outline: 2px solid red;
+  outline: 1px solid red;
 }
 @media screen and (min-width: 480px) {
   .footer__container, .portfolio, .client, .team__container, .employ, .features, .hero__container, .header {
@@ -71,11 +82,11 @@ img {
   }
 }
 
-.join__social-link, .footer__contacts, .footer__address, .portfolio__card-link, .client__link, .social__link, .logo, .nav__link, .header__contact {
+.join__social-link, .footer__contacts, .footer__address, .portfolio__card-link, .client__link, .social__link, .logo, .nav__link, .header__contact, .mobile-socials-link, .mobile-contacts-mail, .mobile-contacts-tell, .menu__link {
   text-decoration: none;
 }
 
-.join__list, .footer__list, .portfolio__card-list, .portfolio__filter-list, .client__list, .social, .team__list, .employ__list, .features__list, .nav_list, .header__group {
+.join__list, .footer__list, .portfolio__card-list, .portfolio__filter-list, .client__list, .social, .team__list, .employ__list, .features__list, .nav_list, .header__group, .mobile-socials, .mobile-contacts {
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -374,14 +385,20 @@ img {
     display: none;
   }
 }
-.menu .link {
-  padding: 10px;
+.menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
   color: inherit;
-  text-decoration: none;
 }
 
-.menu .link:hover,
-.menu .link:focus {
+.menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu__link:hover,
+.menu__link:focus {
   text-decoration: underline;
 }
 
@@ -417,10 +434,17 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
-  background-color: #3f51b5;
+  padding: 48px 40px;
+  background-color: var(--main-white-color);
   z-index: 999;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -453,6 +477,50 @@ img {
   padding: 10px;
   color: #fff;
   text-decoration: none;
+}
+
+.mobile-contacts-tell {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mobile-contacts-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: var(--second-color-text);
+}
+
+.mobile-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.mobile-socials-link {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+.mobile-socials-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.mobile-socials-link:last-child {
+  border: none;
 }
 
 .header {
@@ -553,21 +621,6 @@ img {
   -webkit-transition: color 250ms var(--timings);
   transition: color 250ms var(--timings);
 }
-.nav__link--current {
-  position: relative;
-  color: var(--accent-color);
-}
-.nav__link--current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  display: block;
-  width: 100%;
-  border-radius: 2px;
-  height: 4px;
-  background-color: var(--accent-color);
-}
 .nav__link:hover, .nav__link:focus {
   color: var(--accent-color);
 }
@@ -604,6 +657,31 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .link__current {
+    color: var(--accent-color);
+  }
+  .link__current:hover, .link__current:focus {
+    color: var(--accent-color);
+  }
+}
+@media screen and (min-width: 768px) {
+  .link__current {
+    position: relative;
+    color: var(--accent-color);
+  }
+  .link__current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    height: 4px;
+    background-color: var(--accent-color);
+  }
+}
 .hero {
   margin: 0 auto;
   background-position: center;
@@ -642,10 +720,6 @@ img {
   padding: 10px 32px;
 }
 
-.features {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 .features__icon {
   display: -webkit-box;
   display: -ms-flexbox;

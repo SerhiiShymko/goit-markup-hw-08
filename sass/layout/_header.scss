@@ -85,23 +85,6 @@
 
     transition: color 250ms var(--timings);
 
-    &--current {
-      position: relative;
-      color: var(--accent-color);
-    }
-    &--current::after {
-      content: '';
-
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-
-      display: block;
-      width: 100%;
-      border-radius: 2px;
-      height: 4px;
-      background-color: var(--accent-color);
-    }
     &:hover,
     &:focus {
       color: var(--accent-color);
