@@ -520,6 +520,9 @@ img {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
+.mobile-socials-link:last-child {
+  border: none;
+}
 
 .header {
   border-bottom: 1px solid #ececec;
@@ -592,6 +595,11 @@ img {
     margin-left: 50px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .header__item + .header__item {
+    margin-top: 10px;
+  }
+}
 .header__icon {
   margin-right: 10px;
   fill: currentColor;
@@ -603,6 +611,11 @@ img {
 @media screen and (max-width: 767px) {
   .nav {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    margin-left: 88px;
   }
 }
 .nav_list {
@@ -629,6 +642,7 @@ img {
 }
 
 .logo {
+  padding: 16px 0;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;

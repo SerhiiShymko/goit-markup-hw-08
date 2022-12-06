@@ -11,8 +11,6 @@
   @media screen and (max-width: 767px) {
     display: flex;
     align-items: center;
-    // padding-top: 16px;
-    // padding-bottom: 16px;
   }
   // @media screen and (min-width: 768px) {
   //   display: flex;
@@ -60,6 +58,9 @@
     @media screen and (min-width: 1200px) {
       margin-left: 50px;
     }
+    @media screen and (max-width: 1199px) {
+      margin-top: 10px;
+    }
   }
 
   &__icon {
@@ -73,7 +74,9 @@
     display: none;
   }
   margin-left: 93px;
-
+  @media screen and (min-width: 768px) {
+    margin-left: 88px;
+  }
   &_list {
     @extend %list;
     display: flex;
