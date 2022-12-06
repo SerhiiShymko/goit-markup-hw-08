@@ -1,7 +1,12 @@
 .employ {
-  @extend %container;
-  // @include section(0, 94px);
-
+  @extend %section;
+  padding-top: 0;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  &__conteiner {
+    @extend %container;
+  }
   &__title {
     font-weight: 700;
     font-size: 36px;

@@ -3,17 +3,14 @@ $breakpoints: (
   'tablet': 768px,
   'desktop': 1200px,
 );
-
 %section {
   @media screen and (max-width: 1199px) {
     padding: 60px 0;
   }
-
   @media screen and (min-width: 1200px) {
     padding: 94px 0;
   }
 }
-
 %container {
   margin: 0 auto;
   padding: 0 15px;

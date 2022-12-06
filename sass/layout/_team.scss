@@ -1,20 +1,29 @@
 .team {
-  // @include section;
+  @extend %section;
 
   background-color: var(--bg-color);
 
   &__container {
     @extend %container;
 
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
   }
   &__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: calc(42 / 36);
-    letter-spacing: 0.03em;
-    text-align: center;
+    @media screen and (max-width: 1199px) {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33px;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+    @media screen and (min-width: 1200px) {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: calc(42 / 36);
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
   }
   &__item {
     background-color: var(--main-white-color);
@@ -24,14 +33,49 @@
   }
   &__list {
     @extend %list;
-
-    display: flex;
-    margin-top: 50px;
-    margin-left: calc(-1 * var(--gap));
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: var(--gap);
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: var(--gap);
+      margin-left: calc(-1 * var(--gap));
+      margin-bottom: calc(-1 * var(--gap));
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      margin-top: 50px;
+      margin-left: calc(-1 * var(--gap));
+    }
   }
   &__item {
-    flex-basis: calc((100% - 4 * var(--gap)) / 4);
-    margin-left: var(--gap);
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: var(--gap);
+      }
+      img {
+        width: 450px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 2 * var(--gap)) / 2);
+      margin-left: var(--gap);
+      margin-bottom: var(--gap);
+      img {
+        width: 354px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 4 * var(--gap)) / 4);
+      margin-left: var(--gap);
+      img {
+        width: 270px;
+      }
+    }
   }
   &__name {
     font-weight: 500;
