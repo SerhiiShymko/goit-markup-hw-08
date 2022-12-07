@@ -1,24 +1,25 @@
 .logo {
   @extend %link;
-  padding: 16px 0;
 
   font-family: 'Raleway';
   font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--accent-color);
 
   @media screen and (max-width: 1199px) {
     font-size: 24px;
     line-height: calc(28 / 26);
+    @media screen and (min-width: 1200px) {
+      padding: 16px 0;
+
+      font-size: 26px;
+      line-height: calc(31 / 26);
+    }
   }
 
   &__change {
     font-family: 'Raleway';
     font-weight: 700;
-    font-size: 26px;
-    line-height: calc(31 / 26);
     letter-spacing: 0.03em;
     color: var(--main-white-color);
 
@@ -28,6 +29,12 @@
       @media screen and (max-width: 1199px) {
         font-size: 24px;
         line-height: calc(28 / 26);
+      }
+      @media screen and (min-width: 1200px) {
+        padding: 16px 0;
+
+        font-size: 26px;
+        line-height: calc(31 / 26);
       }
     }
   }
