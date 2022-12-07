@@ -1,13 +1,14 @@
 .portfolio {
-  @extend %container;
-  // @include section;
+  @extend %section;
 
+  &__container {
+    @extend %container;
+  }
   &__filter-list {
     @extend %list;
 
-    padding-bottom: 50px;
-
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
   &__filter-item + &__filter-item {
@@ -15,8 +16,12 @@
   }
   &__button {
     cursor: pointer;
-
-    padding: 6px 22px;
+    @media screen and (max-width: 767px) {
+      padding: 6px 25px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 6px 22px;
+    }
 
     font-family: inherit;
     font-weight: 500;
@@ -44,15 +49,26 @@
   /* Картки */
   &__card-list {
     @extend %list;
-
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--gap));
-    margin-top: calc(-1 * var(--gap));
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 40px;
+      // margin-left: calc(-1 * var(--gap));
+      // margin-top: calc(-1 * var(--gap));
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 50px;
+      margin-left: calc(-1 * var(--gap));
+      margin-top: calc(-1 * var(--gap));
+    }
   }
   &__card-link {
     @extend %link;
-
+    @media screen and (max-width: 767px) {
+      width: 450px;
+    }
     display: flex;
     flex-direction: column;
 
@@ -75,9 +91,21 @@
     }
   }
   &__card-item {
-    flex-basis: calc((100% - 3 * var(--gap)) / 3);
-    margin-left: var(--gap);
-    margin-top: var(--gap);
+    @media screen and (max-width: 767px) {
+      display: flex;
+
+      // flex-basis: calc((100% - 3 * var(--gap)) / 3);
+      // margin-left: var(--gap);
+      &:not(:first-child) {
+        margin-top: var(--gap);
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-basis: calc((100% - 3 * var(--gap)) / 3);
+      margin-left: var(--gap);
+      margin-top: var(--gap);
+    }
   }
   &__card-thumb {
     position: relative;

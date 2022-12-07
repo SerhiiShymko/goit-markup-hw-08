@@ -9,12 +9,10 @@
   @media screen and (max-width: 1199px) {
     font-size: 24px;
     line-height: calc(28 / 26);
-    @media screen and (min-width: 1200px) {
-      padding: 16px 0;
-
-      font-size: 26px;
-      line-height: calc(31 / 26);
-    }
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
   }
 
   &__change {
@@ -31,8 +29,6 @@
         line-height: calc(28 / 26);
       }
       @media screen and (min-width: 1200px) {
-        padding: 16px 0;
-
         font-size: 26px;
         line-height: calc(31 / 26);
       }
