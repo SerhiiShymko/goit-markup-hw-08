@@ -64,6 +64,7 @@ img {
 .footer__container, .portfolio__container, .client__container, .team__container, .employ__conteiner, .features__conteiner, .hero__container, .header {
   margin: 0 auto;
   padding: 0 15px;
+  outline: 1px solid red;
 }
 @media screen and (min-width: 480px) {
   .footer__container, .portfolio__container, .client__container, .team__container, .employ__conteiner, .features__conteiner, .hero__container, .header {
