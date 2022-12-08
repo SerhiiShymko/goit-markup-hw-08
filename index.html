@@ -14,11 +14,10 @@
     rel="stylesheet" />
 
   <!-- normalize -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
 
   <!-- Custom styles -->
-  <link rel="stylesheet" href="./css/main.min.css">
+  <link rel="stylesheet" href="./css/main.min.css" />
   <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
 
@@ -32,7 +31,7 @@
       <nav class="nav">
         <ul class="nav_list">
           <li class="nav__item">
-            <a class="nav__link  link__current" href="./index.html">Студія</a>
+            <a class="nav__link link__current" href="./index.html">Студія</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="./portfolio.html">Портфоліо</a>
@@ -64,7 +63,6 @@
         <use href="./images/icons.svg#menu-button"></use>
       </svg>
     </button>
-
   </header>
 
   <!-- Main -->
@@ -74,7 +72,9 @@
     <section class="hero">
       <div class="hero__container">
         <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="hero__button button" type="button" data-modal-open>Замовити послугу</button>
+        <button class="hero__button button" type="button" data-modal-open>
+          Замовити послугу
+        </button>
       </div>
     </section>
 
@@ -122,7 +122,6 @@
           </li>
         </ul>
       </div>
-
     </section>
 
     <!-- employ  -->
@@ -160,7 +159,26 @@
         <h2 class="team__title">Наша команда</h2>
         <ul class="team__list">
           <li class="team__item">
-            <img src="./images//foto-team1.jpg" alt="" />
+            <picture>
+              <!-- Desktop screen -->
+              <source media="(min-width: 1200px)"
+                srcset="./images/team/xx/img_mob@1x.webp 1x, ./images/gallery/img-1_lg@2x.webp 2x" type="image/webp" />
+              <source media="(min-width: 1200px)"
+                srcset="./images/gallery/img-1_lg.jpg 1x, ./images/gallery/img-1_lg@2x.jpg 2x" type="image/jpg" />
+              <!-- Tablet screen -->
+              <source media="(min-width: 768px)"
+                srcset="./images/gallery/img-1_md.webp 1x, ./images/gallery/img-1_md@2x.webp 2x" type="image/webp" />
+              <source media="(min-width: 768px)"
+                srcset="./images/gallery/img-1_md.jpg 1x, ./images/gallery/img-1_md@2x.jpg 2x" type="image/jpg" />
+              <!-- Mobile screen -->
+              <source media="(max-width: 767px)"
+                srcset="./images/team/xx/img_ob@1x.webp 1x, ./images/gallery/img-1_sm@2x.webp 2x" type="image/webp" />
+              <source media="(max-width: 767px)"
+                srcset="./images/team/xx/img_mob@1x.jpg 1x, ./images/gallery/img-1_sm@2x.jpg 2x" type="image/jpg" />
+              <img class="card-img" src="./images/team/size/img_mob450.jpg" alt="Ігор Дем'яненко" width="450"
+                height="294" loading="lazy" />
+            </picture>
+
             <div class="team__content">
               <h3 class="team__name">Ігор Дем'яненко</h3>
               <p class="team__profession">Product Designer</p>
@@ -194,7 +212,24 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/foto-team2.jpg" alt="" />
+            <picture>
+              <!-- Desktop screen -->
+              <source media="(min-width: 1200px)"
+                srcset="./images/gallery/img-1_lg.webp 1x, ./images/gallery/img-1_lg@2x.webp 2x" type="image/webp" />
+              <source media="(min-width: 1200px)"
+                srcset="./images/gallery/img-1_lg.jpg 1x, ./images/gallery/img-1_lg@2x.jpg 2x" type="image/jpg" />
+              <!-- Tablet screen -->
+              <source media="(min-width: 768px)"
+                srcset="./images/gallery/img-1_md.webp 1x, ./images/gallery/img-1_md@2x.webp 2x" type="image/webp" />
+              <source media="(min-width: 768px)"
+                srcset="./images/gallery/img-1_md.jpg 1x, ./images/gallery/img-1_md@2x.jpg 2x" type="image/jpg" />
+              <!-- Mobile screen -->
+              <source media="(max-width: 767px)"
+                srcset="./images/gallery/img-1_sm.webp 1x, ./images/gallery/img-1_sm@2x.webp 2x" type="image/webp" />
+              <source media="(max-width: 767px)"
+                srcset="./images/gallery/img-1_sm.jpg 1x, ./images/gallery/img-1_sm@2x.jpg 2x" type="image/jpg" />
+              <img src="./copy" alt="Ольга Рєпіна" width="450" height="294" loading="lazy" />
+            </picture>
             <div class="team__content">
               <h3 class="team__name">Ольга Рєпіна</h3>
               <p class="team__profession">Frontend Developer</p>
@@ -404,7 +439,7 @@
         <form class="subscription__form">
           <div class="subscription__mail">
             <label for="subscription" class="subscription__label">Підпишіться на розсилку</label>
-            <input type="text" id="subscription" name="subscription" class="subscription__input" placeholder="E-mail">
+            <input type="text" id="subscription" name="subscription" class="subscription__input" placeholder="E-mail" />
           </div>
           <button type="submit" class="subscription__button button">
             <svg class="subscription__icon" width="24" height="24">
@@ -452,7 +487,7 @@
           <textarea name="user-text" id="user-text" class="modal__textarea" placeholder="Введіть текст"></textarea>
         </div>
         <div class="checkbox">
-          <input id="checkbox-agree" type="checkbox" name="checkbox-agree" class="checkbox__input visually-hidden">
+          <input id="checkbox-agree" type="checkbox" name="checkbox-agree" class="checkbox__input visually-hidden" />
           <label for="checkbox-agree" class="checkbox__label">
             <span class="checkbox__wrapper">
               <svg class="checkbox-icon" width="13" height="10">

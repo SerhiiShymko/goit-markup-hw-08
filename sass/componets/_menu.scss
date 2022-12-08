@@ -27,7 +27,7 @@
 
 .menu__link:hover,
 .menu__link:focus {
-  text-decoration: underline;
+  color: var(--accent-color);
 }
 
 .menu-toggle {

@@ -197,18 +197,30 @@
 
   &__title {
     font-weight: 400;
-    font-size: 14px;
-    line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: var(--second-color-text);
+    @media screen and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
   }
   &__link {
     font-weight: 400;
-    font-size: 14px;
-    line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: var(--accent-color);
+    @media screen and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
   }
   &__input:checked + &__label &__wrapper {
     fill: var(--main-white-color);
