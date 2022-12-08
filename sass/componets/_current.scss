@@ -1,13 +1,12 @@
-@media screen and (max-width: 767px) {
-  .link__current {
-    color: var(--accent-color);
+.link__current {
+  color: var(--accent-color);
 
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
 }
+
 @media screen and (min-width: 768px) {
   .link__current {
     position: relative;
