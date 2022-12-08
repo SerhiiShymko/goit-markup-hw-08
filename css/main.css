@@ -1203,20 +1203,30 @@ img {
 .portfolio {
   /* Картки */
 }
-.portfolio__filter-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
 @media screen and (max-width: 767px) {
   .portfolio__filter-list {
     margin-left: -8px;
     margin-bottom: -15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__filter-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1251,7 +1261,7 @@ img {
     padding: 6px 25px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .portfolio__button {
     padding: 6px 22px;
   }
@@ -1271,6 +1281,18 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding-top: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__card-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-top: var(--gap);
+    margin-left: calc(-1 * var(--gap));
+    margin-top: calc(-1 * var(--gap));
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1322,6 +1344,17 @@ img {
     display: flex;
   }
   .portfolio__card-item:not(:first-child) {
+    margin-top: var(--gap);
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__card-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: calc((100% - 2 * var(--gap)) / 2);
+        flex-basis: calc((100% - 2 * var(--gap)) / 2);
+    margin-left: var(--gap);
     margin-top: var(--gap);
   }
 }
