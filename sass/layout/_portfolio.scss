@@ -6,7 +6,7 @@
   }
   &__filter-list {
     @extend %list;
-    @media screen and (max-width: 767px) {
+    @include mq(phone-only) {
       margin-left: -8px;
       margin-bottom: -15px;
 
@@ -14,18 +14,18 @@
       flex-wrap: wrap;
       justify-content: flex-start;
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
   }
   &__filter-item {
-    @media screen and (max-width: 767px) {
+    @include mq(phone-only) {
       margin-left: 8px;
       margin-bottom: 15px;
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       &:not(:first-child) {
         margin-left: 8px;
       }
@@ -33,10 +33,10 @@
   }
   &__button {
     cursor: pointer;
-    @media screen and (max-width: 767px) {
+    @include mq(phone-only) {
       padding: 6px 25px;
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       padding: 6px 22px;
     }
 
@@ -66,21 +66,21 @@
   /* Картки */
   &__card-list {
     @extend %list;
-    @media screen and (max-width: 767px) {
+    @include mq(phone-only) {
       display: flex;
       flex-wrap: wrap;
       padding-top: 40px;
       // margin-left: calc(-1 * var(--gap));
       // margin-top: calc(-1 * var(--gap));
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       display: flex;
       flex-wrap: wrap;
       padding-top: var(--gap);
       margin-left: calc(-1 * var(--gap));
       margin-top: calc(-1 * var(--gap));
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       display: flex;
       flex-wrap: wrap;
       padding-top: 50px;
@@ -90,7 +90,7 @@
   }
   &__card-link {
     @extend %link;
-    @media screen and (max-width: 767px) {
+    @include mq(phone-only) {
       width: 450px;
     }
     display: flex;
@@ -115,7 +115,7 @@
     }
   }
   &__card-item {
-    @media screen and (max-width: 767px) {
+    @include mq(phone-only) {
       display: flex;
 
       // flex-basis: calc((100% - 3 * var(--gap)) / 3);
@@ -124,14 +124,14 @@
         margin-top: var(--gap);
       }
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       display: flex;
       flex-basis: calc((100% - 2 * var(--gap)) / 2);
       margin-left: var(--gap);
       margin-top: var(--gap);
     }
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       display: flex;
       flex-basis: calc((100% - 3 * var(--gap)) / 3);
       margin-left: var(--gap);

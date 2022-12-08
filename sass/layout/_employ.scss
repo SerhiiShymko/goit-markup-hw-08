@@ -1,7 +1,7 @@
 .employ {
   @extend %section;
   padding-top: 0;
-  @media screen and (max-width: 1199px) {
+  @include mq(tablet-only) {
     display: none;
   }
   &__conteiner {

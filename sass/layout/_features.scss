@@ -11,17 +11,17 @@
     background: var(--bg-color);
     border-radius: 4px;
 
-    @media screen and (min-width: 480px) {
+    @include mq(phone) {
       width: 450px;
       height: 120px;
       padding: 25px 190px;
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       width: 354px;
       height: 120px;
       padding: 25px 142px;
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       width: 270px;
       height: 120px;
       padding: 25px 100px;
@@ -29,17 +29,17 @@
   }
   &__list {
     @extend %list;
-    @media screen and (max-width: 767px) {
+    @include mq(phone-only) {
       display: flex;
       flex-wrap: wrap;
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       display: flex;
       flex-wrap: wrap;
       margin-left: calc(-1 * var(--gap));
       margin-bottom: calc(-1 * var(--gap));
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       display: flex;
       flex-wrap: wrap;
       margin-left: calc(-1 * var(--gap));
@@ -47,19 +47,19 @@
     }
   }
   &__item {
-    @media screen and (max-width: 767px) {
+    @include mq(phone-only) {
       &:not(:last-child) {
         margin-bottom: var(--gap);
       }
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       flex-basis: calc((100% - 2 * var(--gap)) / 2);
 
       margin-left: var(--gap);
       margin-bottom: var(--gap);
     }
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       flex-basis: calc((100% - 4 * var(--gap)) / 4);
 
       margin-left: var(--gap);
@@ -74,7 +74,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
-    @media screen and (max-width: 767px) {
+    @include mq(phone-only) {
       text-align: center;
     }
   }

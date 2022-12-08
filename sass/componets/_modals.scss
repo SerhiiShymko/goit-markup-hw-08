@@ -27,11 +27,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  @media screen and (max-width: 1199px) {
+  @include mq(tablet-only) {
     width: 450px;
     height: 609px;
   }
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     width: 528px;
     height: 581px;
   }
@@ -199,11 +199,11 @@
     font-weight: 400;
     letter-spacing: 0.03em;
     color: var(--second-color-text);
-    @media screen and (max-width: 1199px) {
+    @include mq(tablet-only) {
       font-size: 12px;
       line-height: calc(14 / 12);
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       font-size: 14px;
       line-height: calc(24 / 14);
     }
@@ -213,11 +213,11 @@
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: var(--accent-color);
-    @media screen and (max-width: 1199px) {
+    @include mq(tablet-only) {
       font-size: 12px;
       line-height: calc(14 / 12);
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       font-size: 14px;
       line-height: calc(24 / 14);
     }
@@ -231,11 +231,3 @@
     border-color: var(--accent-color);
   }
 }
-
-/* .chechbox-input:checked + .checkbox-wrapper {
-  border-color: var(--accent-color);
-  background-color: var(--accent-color);
-  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-  background-position: center;
-} */

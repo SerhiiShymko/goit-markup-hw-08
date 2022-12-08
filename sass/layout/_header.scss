@@ -8,7 +8,7 @@
     align-items: center;
   }
 
-  @media screen and (max-width: 767px) {
+  @include mq(phone-only) {
     display: flex;
     align-items: center;
   }
@@ -19,22 +19,22 @@
 
   &__group {
     @extend %list;
-    @media screen and (max-width: 767px) {
+    @include mq(phone-only) {
       display: none;
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       display: inline-block;
       align-items: center;
       margin-left: auto;
     }
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       display: flex;
       margin-left: auto;
     }
   }
   &__contact {
     @extend %link;
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       display: flex;
       align-items: center;
       padding: 32px 0;
@@ -55,10 +55,10 @@
     }
   }
   &__item + &__item {
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       margin-left: 40px;
     }
-    @media screen and (max-width: 1199px) {
+    @include mq(tablet-only) {
       margin-top: 10px;
     }
   }
@@ -70,11 +70,11 @@
 }
 
 .nav {
-  @media screen and (max-width: 767px) {
+  @include mq(phone-only) {
     display: none;
   }
   margin-left: 93px;
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     margin-left: 88px;
   }
   &_list {
