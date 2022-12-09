@@ -150,8 +150,9 @@ img {
   transition: transform 250ms var(--timings);
   transition: transform 250ms var(--timings), -webkit-transform 250ms var(--timings);
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199.98px) {
   .modal {
+    top: 10px;
     width: 450px;
     height: 609px;
   }
@@ -160,15 +161,6 @@ img {
   .modal {
     width: 528px;
     height: 581px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .modal {
-    max-width: 450px;
-    height: 609px;
-    top: 10px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 .modal__close-button {
