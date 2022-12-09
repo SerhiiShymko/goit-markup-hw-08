@@ -1,5 +1,7 @@
 .hero {
+  display: flex;
   background-color: var(--second-bg-color);
+
   &_section {
     margin: 0 auto;
 
@@ -17,7 +19,7 @@
           url(../images/hero/xx/img_mob@2x.jpg);
       }
     }
-    @include mq(tablet) {
+    @include mq(tablet-only) {
       padding: 118px 0;
 
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),

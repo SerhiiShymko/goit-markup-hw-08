@@ -61,22 +61,23 @@ img {
   }
 }
 
-.footer__container, .portfolio__container, .client__container, .team__container, .employ__conteiner, .features__conteiner, .hero__container, .header {
+.footer__container, .portfolio__container, .client__container, .team__container, .employ__conteiner, .features__conteiner, .hero__container, .header__container {
   margin: 0 auto;
   padding: 0 15px;
+  outline: 1px solid red;
 }
 @media screen and (min-width: 480px) {
-  .footer__container, .portfolio__container, .client__container, .team__container, .employ__conteiner, .features__conteiner, .hero__container, .header {
+  .footer__container, .portfolio__container, .client__container, .team__container, .employ__conteiner, .features__conteiner, .hero__container, .header__container {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .footer__container, .portfolio__container, .client__container, .team__container, .employ__conteiner, .features__conteiner, .hero__container, .header {
+  .footer__container, .portfolio__container, .client__container, .team__container, .employ__conteiner, .features__conteiner, .hero__container, .header__container {
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__container, .portfolio__container, .client__container, .team__container, .employ__conteiner, .features__conteiner, .hero__container, .header {
+  .footer__container, .portfolio__container, .client__container, .team__container, .employ__conteiner, .features__conteiner, .hero__container, .header__container {
     width: 1200px;
   }
 }
@@ -150,7 +151,16 @@ img {
   transition: transform 250ms var(--timings);
   transition: transform 250ms var(--timings), -webkit-transform 250ms var(--timings);
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767.98px) {
+  .modal {
+    width: 80%;
+    height: 609px;
+    top: 10px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 767.98px) and (min-width: 768px) {
   .modal {
     top: 10px;
     width: 450px;
@@ -159,19 +169,10 @@ img {
             transform: translateX(-50%);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 767.98px) and (min-width: 1200px) {
   .modal {
     width: 528px;
     height: 581px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .modal {
-    max-width: 450px;
-    height: 609px;
-    top: 10px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 .modal__close-button {
@@ -737,6 +738,9 @@ img {
   }
 }
 .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: var(--second-bg-color);
 }
 .hero_section {
@@ -758,14 +762,14 @@ img {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/xx/img_mob@2x.jpg);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199.98px) {
   .hero_section {
     padding: 118px 0;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/xx/img_tab@1x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/xx/img_tab@1x.jpg);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 1199.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 1199.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1199.98px) and (min-resolution: 192dpi), screen and (max-width: 1199.98px) and (min-resolution: 2dppx) {
   .hero_section {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/xx/img_tab@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/xx/img_tab@2x.jpg);
