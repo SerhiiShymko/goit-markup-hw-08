@@ -91,7 +91,7 @@
   &__card-link {
     @extend %link;
     @include mq(phone-only) {
-      width: 450px;
+      max-width: 450px;
     }
     display: flex;
     flex-direction: column;

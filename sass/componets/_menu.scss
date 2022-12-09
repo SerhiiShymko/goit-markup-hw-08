@@ -25,11 +25,6 @@
   margin-bottom: 32px;
 }
 
-.menu__link:hover,
-.menu__link:focus {
-  color: var(--accent-color);
-}
-
 .menu-toggle {
   height: 40px;
   width: 40px;
@@ -105,10 +100,6 @@
 }
 .mobile-contacts {
   @extend %list;
-
-  &-item + &-item {
-    margin-top: 32px;
-  }
 }
 .mobile-contacts-tell {
   @extend %link;
@@ -135,6 +126,7 @@
   @extend %list;
 
   display: flex;
+  // justify-content: flex-start;
   gap: 10px;
   margin-top: 64px;
   &-item {
@@ -147,7 +139,6 @@
 }
 .mobile-socials-link {
   @extend %link;
-  position: relative;
 
   font-weight: 500;
   font-size: 18px;

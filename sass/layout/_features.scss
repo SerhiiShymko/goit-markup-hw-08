@@ -7,26 +7,31 @@
   &__icon {
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    height: 120px;
 
     background: var(--bg-color);
     border-radius: 4px;
+    // &__svg {
+    //   @include mq(phone-only) {
+    //     // width: 450px;
 
-    @include mq(phone-only) {
-      width: 450px;
-      height: 120px;
-      padding: 25px 190px;
-    }
-    @include mq(tablet) {
-      width: 354px;
-      height: 120px;
-      padding: 25px 142px;
-    }
-    @include mq(desktop) {
-      width: 270px;
-      height: 120px;
-      padding: 25px 100px;
-    }
+    //     // padding: 25px 190px;
+    //   }
+    //   @include mq(tablet) {
+    //     width: 354px;
+    //     // height: 120px;
+    //     // padding: 25px 142px;
+    //   }
+    //   @include mq(desktop) {
+    //     width: 270px;
+    //     // height: 120px;
+    //     // padding: 25px 100px;
+    //   }
+    // }
   }
+
   &__list {
     @extend %list;
     @include mq(phone-only) {

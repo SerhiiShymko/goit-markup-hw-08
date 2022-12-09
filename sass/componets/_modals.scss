@@ -27,15 +27,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  @include mq(tablet-only) {
-    width: 430px;
+  @include mq(tablet) {
+    width: 450px;
     height: 609px;
   }
   @include mq(desktop) {
     width: 528px;
     height: 581px;
   }
-  @media screen and (max-width: 628px) {
+  @include mq(phone-only) {
+    max-width: 450px;
+    height: 609px;
     top: 10px;
     transform: translateX(-50%);
   }
