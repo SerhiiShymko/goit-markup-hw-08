@@ -7,14 +7,10 @@
     align-items: center;
   }
 
-  @include mq(phone-only) {
+  @include mq(phone) {
     display: flex;
     align-items: center;
   }
-  // @media screen and (min-width: 768px) {
-  //   display: flex;
-  //   align-items: center;
-  // }
 
   &__group {
     @extend %list;
