@@ -532,6 +532,10 @@ img {
   color: var(--second-color-text);
 }
 
+.mobile-contacts-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
 .mobile-socials {
   display: -webkit-box;
   display: -ms-flexbox;

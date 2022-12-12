@@ -122,6 +122,9 @@
 
   color: var(--second-color-text);
 }
+.mobile-contacts-item:not(:last-child) {
+  margin-bottom: 32px;
+}
 .mobile-socials {
   @extend %list;
 
